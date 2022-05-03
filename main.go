@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
 
-	fmt.Println(chuvasol(true))
+	fmt.Println(chuvasol(randomSun()))
 
 }
 
@@ -14,4 +17,14 @@ func chuvasol(b bool) string {
 	}
 
 	return "sol"
+}
+
+func randomSun() bool {
+	i := rand.Intn(100)
+
+	if i > 50 {
+		return true
+	}
+
+	return false
 }
